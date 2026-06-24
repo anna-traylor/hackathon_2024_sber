@@ -1,3 +1,78 @@
+# Technology Risk Assessment Tool — Sber Hackathon 2024
+
+**Team 36** — MIPT × Sber Hackathon
+
+## Objective
+
+Develop an algorithm and web application for assessing **technological risk** in software release deployments, specifically for ETL (Extract, Transform, Load) procedures and data warehouse (DWH) computations.
+
+## Risk Parameters
+
+The model evaluates 12 weighted risk factors:
+
+| Parameter | Description |
+|:---|:---|
+| Business Importance | Criticality of affected business processes |
+| Technical Complexity | Complexity of the release |
+| Urgency | Deployment urgency |
+| Data Quality | Quality of input data |
+| Team Experience | Experience level of the deployment team |
+| Regulatory Compliance | Alignment with regulatory requirements |
+| Legal Impact | Potential legal consequences |
+| Financial Risk | Financial exposure |
+| Integration Level | Degree of system integration |
+| Stability of Previous Releases | Historical release stability |
+| Testing Maturity | Maturity of testing processes |
+| Backup Plan | Availability of a rollback plan |
+
+## Risk Classification
+
+| Risk Level | Score Range |
+|:---|:---|
+| Low | < 2.0 |
+| Medium | 2.0 – 2.99 |
+| High | 3.0 – 3.99 |
+| Very High | ≥ 4.0 |
+
+Additional categories for **legal** and **financial** risk can block deployment regardless of overall score.
+
+## Application Features
+
+- **Automated Assessment:** Upload a CSV file for batch risk evaluation
+- **Manual Input:** Enter parameters via web form for single-release assessment
+- **Visualization:** Dynamic charts and styled tables for result interpretation
+- **Deployment:** Flask web application deployed to production
+
+## Technical Architecture
+
+- **Backend:** Flask (Python)
+- **Risk Engine:** Weighted multi-parameter scoring with threshold classification
+- **Visualization:** Matplotlib, Plotly
+- **Deployment:** Vercel
+
+## Relevance to Credit Risk Modeling
+
+This project implements the same architectural patterns used in **credit scoring and SME risk assessment**:
+- Multi-factor weighted evaluation
+- Threshold-based risk classification
+- Interpretable output for decision support
+- Batch and single-entity assessment modes
+
+## Team
+
+- Anna Traylor — Architecture & Code
+- Sergey Sarapulov — Algorithm Optimization
+- Maria Zemskova — Methodology Analysis
+- Iosif Ababneh — Data Visualization
+- Konstantin Cherkesov — Testing & Data Processing
+- Vagiz Yakupov — Risk Ranking
+
+## Links
+
+- [Live Demo](https://hackathon-2024-sber.vercel.app)
+- [Presentation (PDF)](Сбер_презентация_Команда_36.pdf)
+
+----------------------------
 # Хакатон от МФТИ Х СБЕР 2024
 
 ## Команда 36
